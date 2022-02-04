@@ -15,7 +15,7 @@ dt = datetime.fromtimestamp(dt)
 def get_weather(lat = 35.57,lon = 139.40,take_type = "daily",get_num = 0):
     url = "https://api.openweathermap.org/data/2.5/onecall?"
     take_type = "daily"
-    api = "55975281b7070279ccae4910e8276de7"
+    api = ""
 
     param = {"lat":lat,"lon":lon,"appid":api,"units":"metric"}
 
