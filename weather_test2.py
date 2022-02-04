@@ -9,7 +9,7 @@ class Read_weather:
     def __init__(self):
         self.url = "https://api.openweathermap.org/data/2.5/onecall?"
         self.city = "1853295"
-        self.api = "55975281b7070279ccae4910e8276de7"
+        self.api = ""
         self.param = {"lat":"35.57","lon":"139.40","appid":self.api,"exclude":"current,minutely","units":"metric"}
         self.dic = {}
 
@@ -32,7 +32,7 @@ class Slack_send:
     def __init__(self,weather_dic):
         self.weather_dic = weather_dic
         self.client = WebClient(token = os.environ.get("SLACK_BOT_TOKEN"))
-        self.channel_id = "C022GC12ZUJ"
+        self.channel_id = ""
 
     def slack_send(self):
         result = self.client.chat_postMessage(
